@@ -1,13 +1,10 @@
 package practice1;
 
-public class test6 {
+public class test04 {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		int x = 7;
-		x = x * 3;
-		System.out.println(x);
-		x = x / 2;
+		int x = 13 + 17;
 		System.out.println(x);
 	}
 
