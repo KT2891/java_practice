@@ -1,24 +1,21 @@
 package practice3;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class test4 {
+public class test5 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO 自動生成されたメソッド・スタブ
 		BufferedReader br = new BufferedReader(
 				new InputStreamReader( System.in ));
-		System.out.print("xの値は");
+		System.out.print("値を入力 = ");
 		int x = Integer.parseInt( br.readLine() );
-		System.out.print("yの値は");
-		int y = Integer.parseInt( br.readLine() );
-		if (x > y) {
-			System.out.println("xはyより大きい");
-		} else if (x < y) {
-			System.out.println("xはyより小さい");
+		if (x % 2 == 0) {
+			System.out.println("入力した値は偶数です");
 		} else {
-			System.out.println("xとyは等しい");
+			System.out.println("入力した値は奇数です");
 		}
 	}
 
