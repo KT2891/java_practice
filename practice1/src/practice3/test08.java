@@ -10,57 +10,23 @@ public class test08 {
 		// TODO 自動生成されたメソッド・スタブ
 		BufferedReader br = new BufferedReader(
 				new InputStreamReader( System.in ));
-		System.out.println("何曜日ですか？ ");
-		System.out.println("0=日曜、1=月曜、2=火曜、3=水曜、4=木曜、5=金曜、6=土曜");
-		int dayOfWeek = Integer.parseInt( br.readLine() );
-		System.out.println("どの時間帯ですか？");
-		System.out.println("0=午前、1=午後、2=夜間");
-		int time = Integer.parseInt( br.readLine());
-		switch (dayOfWeek) {
-			case 0:
-				close();
-				break;
-			case 1:
-				open();
-				break;
-			case 2:
-				if (time == 0) {
-					close();
-				} else {
-					open();
-				} break;
-			case 3:
-				if (time == 2) {
-					close();
-				} else {
-					open();
-				} break;
-			case 4:
-				open();
-				break;
-			case 5:
-				if (time == 0) {
-					close();
-				} else {
-					open();
-				} break;
-			case 6:
-				if (time == 0) {
-					open();
-				} else {
-					close();
-				} break;
+		System.out.println("中間テストの点数は?");
+		int middle = Integer.parseInt( br.readLine() );
+		System.out.println("期末テストの点数は?");
+		int end = Integer.parseInt( br.readLine() );
+		boolean flag = false;
+		if (middle >= 60 && end >= 60) {
+			flag = true;
+		} else if (middle + end >= 130) {
+			flag = true;
+		} else if (middle + end >= 100 && ( middle >= 90 || end >= 90)) {
+			flag = true;
+		}
+		
+		if (flag) {
+			System.out.println("合格");
+		} else {
+			System.out.println("不合格");
 		}
 	}
-	
-	private static void open() {
-		String opened = "診察しています";
-		System.out.println(opened);
-	}
-	
-	private static void close() {
-		String closed = "休診です";
-		System.out.println(closed);
-	}
-
 }
