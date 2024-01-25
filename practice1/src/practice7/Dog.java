@@ -4,6 +4,11 @@ public class Dog {
 
 	private String Name;
 	private int Age;
+	private String Kind;
+	
+	public Dog( String kind) {
+		Kind = kind;
+	}
 	
 	public void SetName( String nm ) {
 		Name = nm;
@@ -14,9 +19,10 @@ public class Dog {
 	}
 	
 	public void ShowProfile() {
-		System.out.println( "名前は" + Name + "です。" );
+		System.out.println( "犬種:" + Kind );
+		System.out.println( "名前:" + Name );
 		if (Age != 0)
-			System.out.println( "年齢は" + Age + "です。" );
+			System.out.println( "年齢:" + Age );
 	}
 
 }
