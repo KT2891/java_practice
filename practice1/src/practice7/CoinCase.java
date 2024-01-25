@@ -26,7 +26,16 @@ public class CoinCase {
 		return Coin.get(kind);
 	}
 	
+	public int GetCount() {
+		int[] coinKind = { 500, 100, 50, 10, 5, 1 };
+		int totalCount = 0;
+		for (int i : coinKind)
+			totalCount += Coin.get(i);
+		return totalCount;
+	}
+	
 	public int GetAmount(int kind) {
 		return (Coin.get(kind) * kind);
 	}
+	
 }
